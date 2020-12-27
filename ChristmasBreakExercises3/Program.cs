@@ -16,7 +16,7 @@ namespace ChristmasBreakExercises3
 
             while (i < myArray.Length)
             {
-                Console.WriteLine($"{i} {myArray[i]}");
+                Console.WriteLine($"{i}. {myArray[i]}");
                 i++;
             }
             Console.ReadLine();
