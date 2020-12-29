@@ -73,7 +73,7 @@ namespace ChristmasBreakExercises3
         //    int[] numbers = new int[10];
         //    Console.WriteLine("Skriv ett heltal");
         //    int numbIn = Convert.ToInt32(Console.ReadLine());
-            
+
         //    for (int i = 0; i < numbers.Length; i++)
         //    {
         //        numbers[i] = numbIn * (i + 1);
@@ -85,7 +85,7 @@ namespace ChristmasBreakExercises3
         //    Console.ReadLine();
         //}
 
-        //Testa köra nu fungerar :)
+
 
         //----------------------------------------------------------------------------------------------------------
         //16. Skapa ett program som ber användaren mata in sitt namn.
@@ -94,10 +94,38 @@ namespace ChristmasBreakExercises3
         //19. Skriv ut det nya namnet.
         //Exempel: Robin blir Nibor
 
-        //static void Main(string[] args)
-        //{
+        static void Main(string[] args)
+        {
+            List<char> backwards = new List<char>();
+            Console.WriteLine("Skriv ditt namn: ");
+            string nameIn = Console.ReadLine();
+            char[] stringToChar = nameIn.ToCharArray();
+            Array.Reverse(stringToChar);
+            
 
-        //}
+            for (int i = 0; i < stringToChar.Length; i++)
+            {
+                if (i == 0)
+                {
+                    backwards.Add(char.ToUpper(stringToChar[i]));
+                }
+                else if (i == stringToChar.Length - 1)
+                {
+                    backwards.Add(char.ToLower(stringToChar[i]));
+                }
+                else 
+                {
+                    backwards.Add(stringToChar[i]);
+                }
+            }
+            
+            foreach (var item in backwards)
+            {
+                Console.Write($"{item}");
+            }     
+          
+            Console.ReadLine();
+        }
 
         //------------------------------------------------------------------------------------------------------------------
 
@@ -109,7 +137,7 @@ namespace ChristmasBreakExercises3
 
         //Hint 1: Man kan kolla om ett tecken är en bokstav med hjälp av Char.IsLetter()
         //Hint 2: Skapa en array som innehåller vokaler och använd en loop för kolla om tecknet inte är en vokal.  
-        
+
         //static void Main(string[] args)
         //{
 
