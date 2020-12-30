@@ -96,36 +96,69 @@ namespace ChristmasBreakExercises3
 
         static void Main(string[] args)
         {
-            List<char> backwards = new List<char>();
-            Console.WriteLine("Skriv ditt namn: ");
-            string nameIn = Console.ReadLine();
-            char[] stringToChar = nameIn.ToCharArray();
+            List<char> reversed = new List<char>();
+            Console.WriteLine("Skriv ditt namn");
+            string name = Console.ReadLine();
+            char[] stringToChar = name.ToCharArray();
+
             Array.Reverse(stringToChar);
-            
 
             for (int i = 0; i < stringToChar.Length; i++)
             {
                 if (i == 0)
                 {
-                    backwards.Add(char.ToUpper(stringToChar[i]));
+                    reversed.Add(char.ToUpper(stringToChar[i]));
                 }
                 else if (i == stringToChar.Length - 1)
                 {
-                    backwards.Add(char.ToLower(stringToChar[i]));
+                    reversed.Add(Char.ToLower(stringToChar[i]));
                 }
-                else 
+                else
                 {
-                    backwards.Add(stringToChar[i]);
+                    reversed.Add(stringToChar[i]);
                 }
             }
-            
-            foreach (var item in backwards)
+            foreach (var item in reversed)
             {
-                Console.Write($"{item}");
-            }     
-          
+                Console.WriteLine(item);
+            }
             Console.ReadLine();
         }
+
+
+
+        //static void Main(string[] args)
+        //{
+        //    List<char> backwards = new List<char>();
+        //    Console.WriteLine("Skriv ditt namn: ");
+        //    string nameIn = Console.ReadLine();
+        //    char[] stringToChar = nameIn.ToCharArray();
+        //    Array.Reverse(stringToChar);
+
+
+        //    for (int i = 0; i < stringToChar.Length; i++)
+        //    {
+        //        if (i == 0)
+        //        {
+        //            backwards.Add(char.ToUpper(stringToChar[i]));
+        //        }
+        //        else if (i == stringToChar.Length - 1)
+        //        {
+        //            backwards.Add(char.ToLower(stringToChar[i]));
+        //        }
+        //        else 
+        //        {
+        //            backwards.Add(stringToChar[i]);
+        //        }
+        //    }
+
+        //    foreach (var item in backwards)
+        //    {
+        //        Console.Write($"{item}");
+        //    }     
+
+        //    Console.ReadLine();
+        //}
 
         //------------------------------------------------------------------------------------------------------------------
 
